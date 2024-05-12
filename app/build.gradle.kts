@@ -40,8 +40,6 @@ android {
 
 dependencies {
 
-    implementation("com.google.zxing:core:3.4.1");
-    implementation("com.applandeo:material-calendar-view:1.9.2")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.activity)
@@ -50,6 +48,8 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
+    implementation("com.google.zxing:core:3.4.1");
+    implementation("com.applandeo:material-calendar-view:1.9.2")
     implementation("com.sun.mail:android-mail:1.6.6")
     implementation("com.sun.mail:android-activation:1.6.7")
 }
