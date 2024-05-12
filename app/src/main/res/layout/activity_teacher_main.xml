@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    tools:context=".activities.TeacherMainActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:id="@+id/ll1"
+            android:gravity="center_vertical"
+            >
+
+
+            <TextView
+                android:id="@+id/tv_teacher_profile"
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_bg"
+                android:padding="10dp"
+                android:text="FL"
+                android:textAlignment="center"
+                android:layout_centerVertical="true"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+               />
+
+            <TextView
+                android:id="@+id/tv_teacher_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:fontFamily=""
+                android:text="Name"
+                android:textColor="#003C43"
+                android:textSize="28sp"
+                android:layout_toRightOf="@id/tv_teacher_profile"
+                android:layout_centerVertical="true"
+              />
+
+            <TextView
+                android:id="@+id/tv_teacher_counter"
+                android:layout_width="20dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/counter_bg"
+                android:text="3"
+                android:textAlignment="center"
+                android:visibility="invisible"
+                android:layout_marginStart="-19dp"
+                android:textColor="@color/white"
+                android:layout_toRightOf="@id/tv_teacher_profile" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="vertical"
+               android:layout_alignParentEnd="true">
+
+
+               <ImageView
+                   android:layout_width="28dp"
+                   android:layout_height="28dp"
+                   android:src="@drawable/ic_logout"
+                   android:id="@+id/iv_logout"/>
+
+               <TextView
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:textSize="8sp"
+                   android:text="Logout"/>
+
+
+           </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subjects"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:id="@+id/tv_subjects"
+            android:layout_below="@id/ll1"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:id="@+id/hsv"
+            android:layout_below="@id/tv_subjects"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cg_teachers_subject">
+
+
+
+
+
+            </com.google.android.material.chip.ChipGroup>
+
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Appointments"
+            android:layout_below="@id/hsv"
+            android:id="@+id/tv2"/>
+
+
+        <com.applandeo.materialcalendarview.CalendarView
+            android:id="@+id/calendar_teacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv2"
+            android:layout_marginTop="10dp"
+            app:headerColor="#074173"
+            android:scrollbars="none" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="List of Appointments"
+            android:layout_below="@id/calendar_teacher"
+            android:id="@+id/tv1"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lv_my_appointments"
+            android:layout_below="@id/tv1"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

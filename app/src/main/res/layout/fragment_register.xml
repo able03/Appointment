@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.RegisterFragment"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:paddingHorizontal="40dp"
+    android:paddingVertical="10dp">
+
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:textSize="40sp"
+          android:text="REGISTER"
+          android:layout_gravity="center"/>
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lo_fname_register"
+          app:startIconDrawable="@drawable/ic_person">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="First name"
+              android:paddingStart="50dp"
+              android:id="@+id/et_fname_register"
+              android:inputType="text"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lo_lname_register"
+          app:startIconDrawable="@drawable/ic_person">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Last name"
+              android:paddingStart="50dp"
+              android:id="@+id/et_lname_register"
+              android:inputType="text"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lo_phone_register"
+          app:startIconDrawable="@drawable/ic_phone">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Phone "
+              android:maxLength="11"
+              android:paddingStart="50dp"
+              android:id="@+id/et_phone_register"
+              android:inputType="number"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+      <com.google.android.material.textfield.TextInputLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/lo_email_register"
+          app:startIconDrawable="@drawable/ic_email">
+
+          <com.google.android.material.textfield.TextInputEditText
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="Email"
+              android:id="@+id/et_email_register"
+              android:inputType="textEmailAddress"
+              android:paddingStart="50dp"/>
+
+      </com.google.android.material.textfield.TextInputLayout>
+
+      <com.google.android.material.button.MaterialButton
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Register"
+          app:cornerRadius="5dp"
+          android:id="@+id/btn_register"/>
+
+  </LinearLayout>
+
+</ScrollView>
